@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migrate Data</title>
+</head>
+<body>
+    <h6>
+        <?php
+            // $srvr="localhost"; //SESUAIKAN DENGAN WEBSERVER ANDA
+            // $db="dc_absen"; //SESUAIKAN DENGAN WEBSERVER ANDA
+            // $usr="root"; //SESUAIKAN DENGAN WEBSERVER ANDA
+            // $pwd="";//SESUAIKAN DENGAN WEBSERVER ANDA
+
+
+            $database_old = mysqli_connect("localhost", "root", "", "dc_absen");
+            $sql_old = "SELECT * FROM karyawan";
+            $database_new = mysqli_connect("localhost", "root", "", "absensi");
+            
+
+            
+
+            $data_lama = mysqli_query($database_old, $sql_old);
+                while ($h_data_lama=mysqli_fetch_array($data_lama)){ 
+                        $card_id = $h_data_lama['nik'];
+                        $nama_siswa = $h_data_lama['nama'];
+                        $nis = $h_data_lama['nis'];
+                        $nisn = $h_data_lama['nisn'];
+
+                        // Validasi
+                        if($h_data_lama['job_title']=="X") $kelas = 1;
+                        else if($h_data_lama['job_title']=="XI IPA") $kelas = 3;
+                        else if($h_data_lama['job_title']=="XI IPS") $kelas = 4;
+                        else if($h_data_lama['job_title']=="XII IPA") $kelas = 5;
+                        else if($h_data_lama['job_title']=="XII IPS") $kelas = 6;
+                        else $kelas = 2;
+
+                        // Validasi
+                        if($h_data_lama['jenis_kelamin'] == "Laki-Laki") $jenis_kelamin = 1;
+                        else $jenis_kelamin = 2;
+
+                        $no_telp = $h_data_lama['no_telp'];
+                        // $email = $h_data_lama['card_id']; Gak ada
+
+                        // Validasi
+
+                        $foto = $h_data_lama['foto'];
+
+                        $sql_new = "INSERT INTO `data_siswa` (`card_id`, `nama_siswa`, `nis`, `nisn`, `kelas`, `jenis_kelamin`, `no_telp`, `email`, `agama`, `foto`, `status`) VALUES ('$card_id', '$nama_siswa', '$nis', '$nisn', '$kelas', '$jenis_kelamin', '$no_telp', NULL, NULL, '$foto', '1');";
+
+                        $proses = mysqli_query($database_new, $sql_new);
+                        if($proses){
+                        ?>
+                            <h6><?php echo $nama_siswa . " Berhasil!"; ?></h6>
+                        <?php
+                        }
+                        else{
+                            ?>
+                            <h6><?php echo $nama_siswa . " Gagal!"; ?></h6>
+                        <?php    
+                        }
+
+                    ?>
+                    <h6>
+                        <?php
+                            echo $h_data_lama['nik'] . " " . $h_data_lama['nama'];
+                        ?>
+                    </h6>
+            <?php        
+                }
+            ?>
+    </h6>
+    
+</body>
+</html>

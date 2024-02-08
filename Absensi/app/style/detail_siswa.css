@@ -1,0 +1,47 @@
+.main .border {
+    border: 5px solid white;
+    padding: 10px;
+    width: 20%;
+    background-color: aquamarine;
+    /* height: 100px; */
+}
+
+.main .border img {
+    width: 90%;
+    margin-left: 13px;
+}
+
+.main .border h3 {
+    margin-left: 5px;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 5px;
+    font-family: 'Courier New';
+    font-weight: bold;
+}
+
+.main .border .name {
+    margin-top: -25px;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.main .border .no {
+    margin-top: -2px;
+    margin-bottom: 5px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.main h3 {
+    font-size: 20px;
+}
+
+.main .bagian {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.main .bagian h3 {
+    margin-top: -10px;
+}

@@ -1,0 +1,97 @@
+/* Place the navbar at the bottom of the page, and make it stick */
+
+.navbar-atas {
+    background-image: linear-gradient(to right, rgb(115, 155, 115), rgb(0, 179, 255));
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar-atas a {
+    display: block;
+    color: #ffffff;
+    text-align: left;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.navbar-atas-name {
+    margin-top: 9px;
+    font-size: 15px;
+    margin-left: -10px;
+}
+
+.navbar-atas-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar-atas-waktu {
+    text-align: right;
+    font-size: 13px;
+    margin-top: 20px;
+    right: 0;
+}
+
+.navbar-bawah {
+    /* background-color: white; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.navbar-bawah .samping {
+    display: block;
+    color: #e60000;
+    text-align: center;
+    padding: 14px 12.39px;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.navbar-bawah .samping.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.home {
+    height: 40px;
+    width: 40px;
+}
+
+.logout {
+    height: 40px;
+    width: 40px;
+}
+
+
+/* Desktop Version */
+
+@media (min-width:992px) {
+    .navbar-bawah .samping {
+        padding: 30px 28px;
+        font-size: 20px;
+    }
+    .navbar-bawah .samping:hover {
+        background-color: rgb(0, 255, 115);
+        font-style: italic;
+    }
+    .navbar-atas-logo {
+        width: 50px;
+        height: 50px;
+    }
+    .navbar-atas-name {
+        margin-top: 2px;
+        font-size: 20px;
+    }
+    .navbar-atas-waktu {
+        font-size: 20px;
+        margin-top: 2px;
+    }
+}

@@ -1,0 +1,135 @@
+.main .row {
+    margin-top: 2%;
+}
+
+.column {
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 60px;
+    text-align: none;
+    font-size: 20px;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.column:hover {
+    opacity: 0.5;
+}
+
+.main .box {
+    background-color: white;
+    display: block;
+    margin-top: 2%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15%;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+}
+
+thead tr th {
+    text-align: center;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+tbody tr td {
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+th,
+td {
+    height: 20px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.text {
+    font-size: 14px;
+}
+
+
+/* Style tombol utama */
+
+.dropbtn {
+    background-color: #008c5f;
+    color: white;
+    padding: 1px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropbtn img {
+    position: relative;
+    width: 30px;
+    padding: 3px;
+    float: left;
+}
+
+
+/* Warna background dari tombol utama ketika isi konten dropdown ditampilkan */
+
+.dropdown:hover .dropbtn {
+    background-color: #f5f5f5;
+}
+
+
+/* Isi dari <div> - Diperlukan untuk memposisikan isi konten dropdown */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Isi konten dropdown (disembunyikan) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00ff22;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/* Link di dalam menu dropdown */
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Warna link di dalam dropdown ketika disorot */
+
+.dropdown-content a:hover {
+    background-color: #008c5f;
+    color: #fff !important;
+}
+
+
+/* Tampilkan isi konten dopdown ketika disorot */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.act {
+    width: 7%;
+}
